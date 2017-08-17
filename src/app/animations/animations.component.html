@@ -1,0 +1,57 @@
+<h2>Animations</h2>
+
+<div class="row">
+
+    <div class="col-md-6">
+
+        <div class="row">
+
+            <div class="col-sm-12">
+
+                <button class="btn btn-primary" (click)="onAnimate()">Animate!</button>
+                <button class="btn btn-primary" (click)="onShrink()">Shrink!</button>
+
+                <hr>
+
+                <div style="width: 100px; height: 100px;" [@divState]="state">
+                </div>
+
+                <br>
+
+                <div style="width: 100px; height: 100px;" [@wildState]="wildState">
+                </div>
+
+            </div>
+
+            <div class="col-sm-12">
+                <br>
+                <pre>
+                        state: {{ state }}
+                        wild state: {{ wildState }}
+                    </pre>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-6">
+
+        <input type="text" #item>
+        <button class="btn btn-primary" (click)="onAdd(item.value)">Add Item</button>
+
+        <ul>
+            <li *ngFor="let item of items" (click)="onDelete(item)" [@list1]>
+                {{ item }}
+            </li>
+        </ul>
+
+        <ul>
+            <li *ngFor="let item of items" (click)="onDelete(item)" [@list2]>
+                {{ item }}
+            </li>
+        </ul>
+
+    </div>
+
+</div>

@@ -1,0 +1,21 @@
+ul > li {
+    list-style: none;
+    padding: 10px;
+}
+
+ul {
+    padding: 0;
+}
+
+.post {
+    padding: 5px;
+}
+
+.post img {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.post .metadata {
+    display: inline-block;
+}

@@ -1,0 +1,23 @@
+nav {
+    margin: 10px 0 15px;
+}
+
+a {
+    padding: 10px 20px;
+    background-color: slategray;
+    color: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+a:hover {
+    background-color: lightslategray;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+}
+
+.active:hover, .active {
+    background-color: mediumvioletred;
+    color: black;
+}

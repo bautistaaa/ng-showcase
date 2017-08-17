@@ -1,0 +1,37 @@
+<h2>Directives</h2>
+
+<div class="row">
+    <div class="col-md-12">
+        <h3>Attribute Directives</h3>
+
+        <p appHighlight>
+            use default highlights
+        </p>
+
+        <p appHighlight [defaultColor]="'transparent'" [hightlightColor]="'green'">
+            use input values
+        </p>
+
+        <hr>
+
+        <h3>Structural Directives</h3>
+
+        <h4>*ngFor example</h4>
+
+        <ul>
+            <li *ngFor="let item of list">
+                {{ item }}
+            </li>
+        </ul>
+
+        <h4>*ngIf example</h4>
+
+        <button class="btn btn-primary" (click)="show = !show">Toggle</button>
+
+        <span *ngIf="show">TOGGLE ME!</span>
+
+        <hr>
+
+        <h4>ngSwitch is another example. see more <a href="https://angular.io/guide/structural-directives">here</a></h4>
+    </div>
+</div>

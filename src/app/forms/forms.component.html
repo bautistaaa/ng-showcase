@@ -1,0 +1,48 @@
+<h2>Reactive Form</h2>
+
+<div class="row">
+
+    <div class="col-md-4">
+
+        <form [formGroup]="form" (ngSubmit)="onSubmit(form)" novalidate>
+
+            <label class="center-block">Name:
+                <input class="form-control" formControlName="name" required>
+            </label>
+            <div class="error" *ngIf="form.get('name').hasError('required') && form.get('name').touched">
+                Name is required
+            </div>
+            <div class="error" *ngIf="form.get('name').hasError('minlength') && form.get('name').touched">
+                minimum length of 2!
+            </div>
+
+            <label class="center-block">Program:
+                <input class="form-control" formControlName="program">
+            </label>
+
+            <label class="center-block">Division:
+                <input class="form-control" formControlName="division">
+            </label>
+
+            <label class="center-block">Start Date:
+                <datepicker formControlName="startDate"
+                            [minDate]="minDate"
+                            [showWeeks]="false"></datepicker>
+            </label>
+
+            <button class="btn btn-success pull-right" type="submit" [disabled]="form.invalid">Submit</button>
+            <button class="btn btn-danger pull-right" (click)="resetForm()" [disabled]="!form.dirty">Reset</button>
+        </form>
+
+    </div>
+
+    <div class="col-md-8">
+
+        <pre>
+            <p>Form value: {{ form.value | json }}</p>
+            <p>Form status: {{ form.status | json }}</p>
+        </pre>
+
+    </div>
+
+</div>

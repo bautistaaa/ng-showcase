@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    font: 16px "Roboto", Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(assets/fonts/Roboto-Regular.ttf);
+}
+
+.content {
+    margin-left: 200px;
+}
+
+.btn {
+    border-radius: 0 !important;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+table button {
+    box-shadow: none !important;
+}
